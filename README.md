@@ -46,3 +46,22 @@ from sklearn.neighbors import KNeighborsClassifier
 knn_cls = KNeighborsClassifier(n_neighbors=3)
 knn_cls.fit(X_train, y_train)
 y_pred = knn_cls.predict(X_test)
+sys.exit()
+
+### How to run
+```python
+pip install librosa torch sklearn #Install required libraries
+!gdown 1MGhyeMngD6P9Kz9zJpL68ylQaIQvW7Zx #Download and unzip the GTZAN dataset
+!unzip GTZAN.zip -d /content/GTZAN
+!rm GTZAN.zip
+# Example of extracting chromagram # Preprocess and extract features
+chromagram = librosa.feature.chroma_stft(y=audio_segment, sr=sample_rate)
+# Train KNN model
+knn_cls.fit(X_train, y_train)
+# Evaluate model
+accuracy = knn_cls.score(X_test, y_test)
+print(f'Accuracy: {accuracy}')
+sys.exit()
+
+## Conclusion
+This README includes sections for an overview, dataset, features, machine learning models, and instructions on how to run the project. You can adjust or extend it based on additional details or requirements specific to your project!
