@@ -46,7 +46,7 @@ from sklearn.neighbors import KNeighborsClassifier
 knn_cls = KNeighborsClassifier(n_neighbors=3)
 knn_cls.fit(X_train, y_train)
 y_pred = knn_cls.predict(X_test)
-sys.exit()
+```
 
 ### How to run
 ```python
@@ -61,8 +61,8 @@ knn_cls.fit(X_train, y_train)
 # Evaluate model
 accuracy = knn_cls.score(X_test, y_test)
 print(f'Accuracy: {accuracy}')
-import sys
-sys.exit()
+```
+
 
 ## Conclusion
 This README includes sections for an overview, dataset, features, machine learning models, and instructions on how to run the project. You can adjust or extend it based on additional details or requirements specific to your project!
