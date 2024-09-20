@@ -61,6 +61,7 @@ knn_cls.fit(X_train, y_train)
 # Evaluate model
 accuracy = knn_cls.score(X_test, y_test)
 print(f'Accuracy: {accuracy}')
+import sys
 sys.exit()
 
 ## Conclusion
